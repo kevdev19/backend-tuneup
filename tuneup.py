@@ -23,7 +23,7 @@ def profile(func):
         pr.enable()
         retrv = func(*args, **kwargs)
         pr.disable()
-        s = io.StringIO
+        s = io.StringIO()
         sortby = 'cumulative'
         ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
         ps.print_stats()

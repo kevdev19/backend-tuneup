@@ -10,6 +10,7 @@ __author__ = "Kevin Blount"
 import cProfile
 import pstats
 import functools
+import timeit
 
 
 def profile(func):

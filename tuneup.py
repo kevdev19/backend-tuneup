@@ -48,10 +48,13 @@ def find_duplicate_movies(src):
     return duplicates
 
 
+# TODO - use timeit to test the main() function. Replace stmt with needed statment
 def timeit_helper():
     """Part A: Obtain some profiling measurements using timeit."""
-    # YOUR CODE GOES HERE
-    pass
+    t = timeit.Timer(stmt='pass', setup='pass')
+    result = sorted(t.repeat(repeat=7, number=3))
+    print('Best time across 7 repeats of 5 runs per repeat: {:.11} sec'.format(
+        min(result)))
 
 
 def main():
